@@ -3,16 +3,14 @@
 var ImagePickerManager = require('NativeModules').RNImagePickerManager;
 
 var ImagePicker = {
-  show(sourceKey) {
-    console.log("ImagePicker index.js show");
+  SourceType: ImagePickerManager.SourceType,
+
+  show(sourceKey, allowEditing) {
     return new Promise((resolve, reject) => {
-      console.log("ImagePicker index.js promise func");
-      ImagePickerManager.showWithSourceType(sourceKey, (error, ret) => {
+      ImagePickerManager.showWithSourceType(sourceKey, allowEditing, (error, ret) => {
         if (error) {
-          console.log("ImagePicker index.js promise error");
           reject(error);
         } else {
-          console.log("ImagePicker index.js promise resolve");
           resolve(ret);
         }
       });

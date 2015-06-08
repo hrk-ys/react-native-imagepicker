@@ -25,15 +25,10 @@ var ImagePickerExample = React.createClass({
 
 
 
-  showImagePicker() {
-    console.log("showImagePicker");
+  showImagePicker(srcType) {
     var self = this;
-    DeviceEventEmitter.addListener(
-      'ImagePicker',
-      function(value) { console.log('event emitter') }
-    );
 
-    ImagePicker.show()
+    ImagePicker.show(srcType, false)
       .then( (image) => {
 
         console.log('success:' + image);
@@ -58,8 +53,14 @@ var ImagePickerExample = React.createClass({
 
     return (
       <View style={styles.container}>
-        <Text onPress={this.showImagePicker}>
-          画像を選択
+        <Text onPress={() => this.showImagePicker(ImagePicker.SourceType.PhotoLibrary)}>
+          画像を選択(PhotoLibrary)
+        </Text>
+        <Text onPress={() => this.showImagePicker(ImagePicker.SourceType.Camera)}>
+          画像を選択(Camera)
+        </Text>
+        <Text onPress={() => this.showImagePicker(ImagePicker.SourceType.SavedPhotosAlbum)}>
+          画像を選択(SavedPhotosAlbum)
         </Text>
         { imageView }
       </View>

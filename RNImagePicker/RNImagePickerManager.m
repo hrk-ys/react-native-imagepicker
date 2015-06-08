@@ -26,15 +26,29 @@
 
 RCT_EXPORT_MODULE();
 
-RCT_EXPORT_METHOD(showWithSourceType:(NSString *)key findEvents:(RCTResponseSenderBlock)callback)
+
+- (NSDictionary *)constantsToExport
+{
+    return @{
+             @"SourceType": @{
+                     @"PhotoLibrary":     [NSNumber numberWithInteger:UIImagePickerControllerSourceTypePhotoLibrary],
+                     @"Camera":           [NSNumber numberWithInteger:UIImagePickerControllerSourceTypeCamera],
+                     @"SavedPhotosAlbum": [NSNumber numberWithInteger:UIImagePickerControllerSourceTypeSavedPhotosAlbum],
+                     }
+             };
+}
+
+
+RCT_EXPORT_METHOD(showWithSourceType:(UIImagePickerControllerSourceType)key allowsEditing:(BOOL)allowEditing findEvents:(RCTResponseSenderBlock)callback)
 {
     _callback = callback;
     dispatch_async(dispatch_get_main_queue(), ^{
-
+        
         UIImagePickerController* imagePicker = [[UIImagePickerController alloc] init];
         imagePicker.delegate = self;
-        imagePicker.allowsEditing = YES;
-
+        imagePicker.sourceType = key;
+        imagePicker.allowsEditing = allowEditing;
+        
         [[self rootVc] presentViewController:imagePicker animated:YES completion:nil];
     });
 }
@@ -60,15 +74,30 @@ RCT_EXPORT_METHOD(showWithSourceType:(NSString *)key findEvents:(RCTResponseSend
 }
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    NSURL* url = info[UIImagePickerControllerReferenceURL];
-    if (info[UIImagePickerControllerEditedImage]) {
+    UIImage* outputImage = nil;
+    BOOL isPing = NO;
+    NSString* imagePath = nil;
+    
+    if (picker.sourceType == UIImagePickerControllerSourceTypeCamera) {
+        isPing = NO;
+        outputImage = info[UIImagePickerControllerOriginalImage];
+    } else if (info[UIImagePickerControllerEditedImage]) {
+        NSURL* url = info[UIImagePickerControllerReferenceURL];
         NSString* assetFilePath = url.absoluteString;
-        BOOL isPing = [[assetFilePath uppercaseString] hasSuffix:@"PNG"];
-        NSString* tmpFilePath = [self writeImgae:info[UIImagePickerControllerEditedImage] isPing:isPing];
-        [self _closeWithImage:tmpFilePath];
-    } else {
-        [self _closeWithImage:url.absoluteString];
+        isPing = [[assetFilePath uppercaseString] hasSuffix:@"PNG"];
+        outputImage = info[UIImagePickerControllerEditedImage];
     }
+    
+    
+    if (outputImage) {
+        imagePath = [self writeImgae:outputImage isPing:isPing];
+        
+    } else {
+        NSURL* url = info[UIImagePickerControllerReferenceURL];
+        imagePath = url.absoluteString;
+    }
+    [self _closeWithImage:imagePath];
+    
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
@@ -77,16 +106,16 @@ RCT_EXPORT_METHOD(showWithSourceType:(NSString *)key findEvents:(RCTResponseSend
 }
 
 - (NSString*) writeImgae:(UIImage*)image isPing:(BOOL)isPing {
-
+    
     NSData *data = isPing ? UIImagePNGRepresentation(image) : UIImageJPEGRepresentation(image, 0.8f);
-
+    
     NSTimeInterval now =  [[NSDate date] timeIntervalSince1970];
     NSString* filename = [NSString stringWithFormat:isPing ? @"tmp-%d.png" : @"tmp-%d.jpg", (int)now];
-
+    
     NSArray *array = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
     NSString *cacheDirPath = [array objectAtIndex:0];
     NSString *filePath = [cacheDirPath stringByAppendingPathComponent:filename];
-
+    
     if ([data writeToFile:filePath atomically:YES]) {
         return filePath;
     } else {
@@ -95,3 +124,4 @@ RCT_EXPORT_METHOD(showWithSourceType:(NSString *)key findEvents:(RCTResponseSend
 }
 
 @end
+
