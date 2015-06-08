@@ -1,0 +1,391 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E916A99F1B2526B90046E548 /* libRNImagePicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E916A9931B2526B90046E548 /* libRNImagePicker.a */; };
+		E916A9AF1B2527430046E548 /* RNImagePickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E916A9AE1B2527430046E548 /* RNImagePickerManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E916A9A01B2526B90046E548 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E916A98B1B2526B90046E548 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E916A9921B2526B90046E548;
+			remoteInfo = RNImagePicker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E916A9911B2526B90046E548 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E916A9931B2526B90046E548 /* libRNImagePicker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNImagePicker.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E916A99E1B2526B90046E548 /* RNImagePickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNImagePickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E916A9A41B2526B90046E548 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E916A9AD1B2527430046E548 /* RNImagePickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNImagePickerManager.h; sourceTree = "<group>"; };
+		E916A9AE1B2527430046E548 /* RNImagePickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNImagePickerManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E916A9901B2526B90046E548 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E916A99B1B2526B90046E548 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E916A99F1B2526B90046E548 /* libRNImagePicker.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E916A98A1B2526B90046E548 = {
+			isa = PBXGroup;
+			children = (
+				E916A9951B2526B90046E548 /* RNImagePicker */,
+				E916A9A21B2526B90046E548 /* RNImagePickerTests */,
+				E916A9941B2526B90046E548 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E916A9941B2526B90046E548 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E916A9931B2526B90046E548 /* libRNImagePicker.a */,
+				E916A99E1B2526B90046E548 /* RNImagePickerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E916A9951B2526B90046E548 /* RNImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				E916A9AD1B2527430046E548 /* RNImagePickerManager.h */,
+				E916A9AE1B2527430046E548 /* RNImagePickerManager.m */,
+			);
+			path = RNImagePicker;
+			sourceTree = "<group>";
+		};
+		E916A9A21B2526B90046E548 /* RNImagePickerTests */ = {
+			isa = PBXGroup;
+			children = (
+				E916A9A31B2526B90046E548 /* Supporting Files */,
+			);
+			path = RNImagePickerTests;
+			sourceTree = "<group>";
+		};
+		E916A9A31B2526B90046E548 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E916A9A41B2526B90046E548 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E916A9921B2526B90046E548 /* RNImagePicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E916A9A71B2526B90046E548 /* Build configuration list for PBXNativeTarget "RNImagePicker" */;
+			buildPhases = (
+				E916A98F1B2526B90046E548 /* Sources */,
+				E916A9901B2526B90046E548 /* Frameworks */,
+				E916A9911B2526B90046E548 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RNImagePicker;
+			productName = RNImagePicker;
+			productReference = E916A9931B2526B90046E548 /* libRNImagePicker.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E916A99D1B2526B90046E548 /* RNImagePickerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E916A9AA1B2526B90046E548 /* Build configuration list for PBXNativeTarget "RNImagePickerTests" */;
+			buildPhases = (
+				E916A99A1B2526B90046E548 /* Sources */,
+				E916A99B1B2526B90046E548 /* Frameworks */,
+				E916A99C1B2526B90046E548 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E916A9A11B2526B90046E548 /* PBXTargetDependency */,
+			);
+			name = RNImagePickerTests;
+			productName = RNImagePickerTests;
+			productReference = E916A99E1B2526B90046E548 /* RNImagePickerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E916A98B1B2526B90046E548 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = hiroki.yoshifuji;
+				TargetAttributes = {
+					E916A9921B2526B90046E548 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					E916A99D1B2526B90046E548 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+				};
+			};
+			buildConfigurationList = E916A98E1B2526B90046E548 /* Build configuration list for PBXProject "RNImagePicker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E916A98A1B2526B90046E548;
+			productRefGroup = E916A9941B2526B90046E548 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E916A9921B2526B90046E548 /* RNImagePicker */,
+				E916A99D1B2526B90046E548 /* RNImagePickerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E916A99C1B2526B90046E548 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E916A98F1B2526B90046E548 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E916A9AF1B2527430046E548 /* RNImagePickerManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E916A99A1B2526B90046E548 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E916A9A11B2526B90046E548 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E916A9921B2526B90046E548 /* RNImagePicker */;
+			targetProxy = E916A9A01B2526B90046E548 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E916A9A51B2526B90046E548 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E916A9A61B2526B90046E548 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E916A9A81B2526B90046E548 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../React/**",
+					"$(SRCROOT)/../react-native/React/**",
+					"$(SRCROOT)/node_modules/react-native/React/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E916A9A91B2526B90046E548 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../../React/**",
+					"$(SRCROOT)/../react-native/React/**",
+					"$(SRCROOT)/node_modules/react-native/React/**",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		E916A9AB1B2526B90046E548 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RNImagePickerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E916A9AC1B2526B90046E548 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RNImagePickerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E916A98E1B2526B90046E548 /* Build configuration list for PBXProject "RNImagePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E916A9A51B2526B90046E548 /* Debug */,
+				E916A9A61B2526B90046E548 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E916A9A71B2526B90046E548 /* Build configuration list for PBXNativeTarget "RNImagePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E916A9A81B2526B90046E548 /* Debug */,
+				E916A9A91B2526B90046E548 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E916A9AA1B2526B90046E548 /* Build configuration list for PBXNativeTarget "RNImagePickerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E916A9AB1B2526B90046E548 /* Debug */,
+				E916A9AC1B2526B90046E548 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E916A98B1B2526B90046E548 /* Project object */;
+}
