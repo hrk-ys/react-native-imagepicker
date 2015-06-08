@@ -55,7 +55,7 @@ RCT_EXPORT_METHOD(showWithSourceType:(UIImagePickerControllerSourceType)key allo
 
 - (UIViewController*)rootVc
 {
-    UIWindow* window = [[UIApplication sharedApplication] keyWindow];
+    UIWindow* window = [[[UIApplication sharedApplication] delegate] window];
     return [window rootViewController];
 }
 
